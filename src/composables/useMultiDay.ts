@@ -1,6 +1,6 @@
 import { ref, computed, watch, toRaw } from 'vue'
 import type { TDayState, TDaySummary } from '@/types'
-import type { TSelections, TCustomItem } from '@/types'
+import type { TSelections } from '@/types'
 import { useCalculator, buildDefaultSelections, calculateCategoryTotals } from './useCalculator'
 
 function deepClone<T>(obj: T): T {
