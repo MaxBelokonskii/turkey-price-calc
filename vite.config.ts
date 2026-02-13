@@ -1,13 +1,13 @@
-import { defineConfig } from 'vite'
+import { resolve } from 'node:path'
 import vue from '@vitejs/plugin-vue'
-import { fileURLToPath } from 'node:url'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   base: '/turkey-price-calc/',
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@': resolve(__dirname, 'src'),
     },
   },
 })
