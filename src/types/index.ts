@@ -48,3 +48,15 @@ export interface TCustomItem {
   label: string
   priceUsd: number
 }
+
+export interface TDayState {
+  selections: TSelections
+  customItems: TCustomItem[]
+  disabledCategories: Record<string, boolean>
+}
+
+export interface TDaySummary {
+  dayIndex: number
+  total: number
+  categoryTotals: Record<string, number>
+}
